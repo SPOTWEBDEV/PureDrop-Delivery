@@ -28,6 +28,21 @@
                                                                <span>User</span>
                                                       </a>
                                              </li>
+										      <li>
+                                                      <a href="<?php echo $domain ?>admin/product/">
+                                                               <iconify-icon icon="mage:email" class="menu-icon">
+                                                               </iconify-icon>
+                                                               <span>Add Product</span>
+                                                      </a>
+                                             </li>
+										    <li>
+                                                      <a href="<?php echo $domain ?>admin/product/list/">
+                                                               <iconify-icon icon="mage:email" class="menu-icon">
+                                                               </iconify-icon>
+                                                               <span>List Product</span>
+                                                      </a>
+                                             </li>
+										
                                              <li>
                                                       <a href="<?php echo $domain  ?>admin/contact/">
                                                                <iconify-icon icon="bi:chat-dots" class="menu-icon">
