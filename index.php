@@ -972,39 +972,7 @@ include('./server/connection.php');
 
 
 
-        <script>
-            let addcart = document.querySelectorAll('.addcart');
-            addcart.forEach(el => {
-                el.onclick = (event) => {
-                    let parent = event.target.closest('.inner-box');
-                    const price = parent.querySelector('h6 span').textContent;
-                    const name = parent.querySelector('h4 a').textContent;
-                    const img = parent.querySelector('figure img').src;
-
-                    console.log(price, name, img);
-
-                    const info = {
-                        id: parent.id,
-                        quantity: 1,
-                        price,
-                        name,
-                        img
-                    };
-
-                    let data = JSON.parse(localStorage.getItem('USER_CHART')) || [];
-
-                    let itemExists = data.some(item => item.id === info.id);
-
-                    if (!itemExists) {
-                        data.push(info);
-                        localStorage.setItem("USER_CHART", JSON.stringify(data));
-                        alert('Successfully added this item to your cart!');
-                    } else {
-                        alert('Item has already been added to your cart.');
-                    }
-                };
-            });
-        </script>
+      
         
         <button class="scroll-top scroll-to-target" data-target="html">
             <span class="fal fa-angle-up"></span>
