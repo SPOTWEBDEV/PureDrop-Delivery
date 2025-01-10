@@ -1,39 +1,47 @@
+<?php
+
+include('../server/connection.php');
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from azim.commonsupport.com/Acuasafe/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 11:12:10 GMT -->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Acuasafe - HTML 5 Template Preview</title>
+    <title>Acuasafe - HTML 5 Template Preview</title>
 
-<!-- Fav Icon -->
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Fav Icon -->
+    <link rel="icon" href="<?php echo $domain ?>assets/images/favicon.ico" type="image/x-icon">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
 
-<!-- Stylesheets -->
-<link href="assets/css/font-awesome-all.css" rel="stylesheet">
-<link href="assets/css/flaticon.css" rel="stylesheet">
-<link href="assets/css/owl.css" rel="stylesheet">
-<link href="assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
-<link href="assets/css/animate.css" rel="stylesheet">
-<link href="assets/css/jquery-ui.css" rel="stylesheet">
-<link href="assets/css/nice-select.css" rel="stylesheet">
-<link href="assets/css/jquery.bootstrap-touchspin.css" rel="stylesheet">
-<link href="assets/css/color.css" rel="stylesheet">
-<link href="assets/css/style1.css" rel="stylesheet">
-<link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link href="<?php echo $domain ?>assets/css/font-awesome-all.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/flaticon.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/owl.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/animate.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/nice-select.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/jquery.bootstrap-touchspin.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/color.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/style1.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/responsive.css" rel="stylesheet">
 
 </head>
 
 
 <!-- page wrapper -->
+
 <body>
 
     <div class="boxed_wrapper">
@@ -43,10 +51,10 @@
         <header class="main-header">
             <!-- header-lower -->
             <div class="header-lower">
-                <div class="shape" style="background-image: url(assets/images/shape/shape-1.png);"></div>
+                <div class="shape" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-1.png);"></div>
                 <div class="outer-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="index-2.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                        <figure class="logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/logo.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area clearfix">
                         <!--Mobile Navigation Toggler-->
@@ -83,7 +91,7 @@
                                             <li><a href="gallery-2.html">Gallery Two</a></li>
                                             <li><a href="error.html">404</a></li>
                                         </ul>
-                                    </li> 
+                                    </li>
                                     <li class="dropdown"><a href="index-2.html">Services</a>
                                         <ul>
                                             <li><a href="service.html">Our Services</a></li>
@@ -94,7 +102,7 @@
                                             <li><a href="service-details-5.html">Water Softening</a></li>
                                             <li><a href="service-details-6.html">Market Research</a></li>
                                         </ul>
-                                    </li> 
+                                    </li>
                                     <li class="current dropdown"><a href="index-2.html">Shop</a>
                                         <ul>
                                             <li><a href="shop.html">Shop</a></li>
@@ -102,13 +110,15 @@
                                             <li><a href="cart.html">Cart</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                         </ul>
-                                    </li> 
+                                    </li>
                                     <li class="dropdown"><a href="index-2.html">Elements</a>
                                         <div class="megamenu">
                                             <div class="row clearfix">
                                                 <div class="col-xl-6 column">
                                                     <ul>
-                                                        <li><h4>Elements 1</h4></li>
+                                                        <li>
+                                                            <h4>Elements 1</h4>
+                                                        </li>
                                                         <li><a href="feature-element-1.html">Feature Block 01</a></li>
                                                         <li><a href="feature-element-2.html">Feature Block 02</a></li>
                                                         <li><a href="about-element-1.html">About Block 01</a></li>
@@ -121,7 +131,9 @@
                                                 </div>
                                                 <div class="col-xl-6 column">
                                                     <ul>
-                                                        <li><h4>Elements 2</h4></li>
+                                                        <li>
+                                                            <h4>Elements 2</h4>
+                                                        </li>
                                                         <li><a href="news-element-1.html">News Block 01</a></li>
                                                         <li><a href="news-element-2.html">News Block 02</a></li>
                                                         <li><a href="team-element-1.html">Team Block 01</a></li>
@@ -131,18 +143,18 @@
                                                         <li><a href="pricing-element.html">Pricing Block</a></li>
                                                         <li><a href="chooseus-element.html">Chooseus Block</a></li>
                                                     </ul>
-                                                </div>                                   
-                                            </div>                                        
+                                                </div>
+                                            </div>
                                         </div>
-                                    </li> 
+                                    </li>
                                     <li class="dropdown"><a href="index-2.html">Blog</a>
                                         <ul>
                                             <li><a href="blog.html">Blog Grid</a></li>
                                             <li><a href="blog-2.html">Blog Standard</a></li>
                                             <li><a href="blog-details.html">Blog Details</a></li>
                                         </ul>
-                                    </li>  
-                                    <li><a href="contact.html">Contact</a></li>   
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -177,7 +189,7 @@
             <div class="sticky-header">
                 <div class="outer-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="index-2.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                        <figure class="logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/logo.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area clearfix">
                         <nav class="main-menu clearfix">
@@ -216,9 +228,9 @@
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="fas fa-times"></i></div>
-            
+
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index-2.html"><img src="assets/images/logo-2.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/logo-2.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
@@ -242,8 +254,8 @@
 
 
         <!-- Page Title -->
-        <section class="page-title centred" style="background-image: url(assets/images/background/page-title.jpg);">
-            <div class="shape" style="background-image: url(assets/images/shape/banner-shap.png);"></div>
+        <section class="page-title centred" style="background-image: url(<?php echo $domain ?>assets/images/background/page-title.jpg);">
+            <div class="shape" style="background-image: url(<?php echo $domain ?>assets/images/shape/banner-shap.png);"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <h1>Checkout</h1>
@@ -258,83 +270,89 @@
 
 
         <!-- checkout-section -->
+        <!-- checkout-section -->
         <section class="checkout-section">
             <div class="container">
+                <div class="my-3" style="display: none;">
+                    <p style="color: red;">Uses this account</p>
+                    <b></b>
+                </div>
                 <div class="row">
+                    <!-- Billing Details -->
                     <div class="col-lg-6 col-md-12 col-sm-12 left-column">
                         <div class="inner-box">
                             <div class="billing-info">
                                 <h4 class="sub-title">Billing Details</h4>
                                 <form action="#" method="post" class="billing-form">
+                                    <input type="hidden" name="payment_method" value="" id="paymentMethod"> <!-- Hidden payment field -->
+
                                     <div class="row">
+                                        <!-- Full Name -->
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <label>Full Name*</label>
                                             <div class="field-input">
                                                 <input type="text" name="first_name">
                                             </div>
                                         </div>
-                                     
+
+                                        <!-- Company Name -->
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                             <label>Company Name*</label>
                                             <div class="field-input">
                                                 <input type="text" name="company_name">
                                             </div>
                                         </div>
+
+                                        <!-- Email Address -->
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                             <label>Email Address*</label>
                                             <div class="field-input">
                                                 <input type="email" name="email">
                                             </div>
                                         </div>
+
+                                        <!-- Phone Number -->
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <label>Phone Number*</label>
                                             <div class="field-input">
                                                 <input type="text" name="phone">
                                             </div>
                                         </div>
+
+                                        <!-- Address -->
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                             <label>Address*</label>
                                             <div class="field-input">
                                                 <input type="text" name="address" class="address">
-                                                <input type="text" name="address">
+                                                <input type="text" name="address2">
                                             </div>
                                         </div>
+
+                                        <!-- Town/City -->
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                             <label>Town/City*</label>
                                             <div class="field-input">
                                                 <input type="text" name="town_city">
                                             </div>
                                         </div>
+
+                                        <!-- Zip Code -->
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <label>Zip Code*</label>
                                             <div class="field-input">
                                                 <input type="text" name="zip">
                                             </div>
                                         </div>
-                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                            <div class="create-acc">
-                                                <div class="custom-controls-stacked">
-                                                    <label class="custom-control material-checkbox">
-                                                        <input type="checkbox" class="material-control-input">
-                                                        <span class="material-control-indicator"></span>
-                                                        <span class="description">Create an Account?</span>
-                                                    </label>
-                                                </div> 
-                                            </div>
-                                        </div>
                                     </div>
                                 </form>
                             </div>
-                            <div class="additional-info">
-                                <div class="note-book">
-                                    <label>Order Notes</label>
-                                    <textarea name="note_box" placeholder="Notes about your order, e.g. special notes for your delivery"></textarea>
-                                </div>
-                            </div>
                         </div>
                     </div>
+
+                    <!-- Product Section & Payment Info -->
                     <div class="col-lg-6 col-md-12 col-sm-12 right-column">
                         <div class="inner-box">
+                            <!-- Product Info -->
                             <div class="order-info">
                                 <h4 class="sub-title">Your Order</h4>
                                 <div class="order-product">
@@ -343,62 +361,50 @@
                                             <p>Product</p>
                                             <span>Total</span>
                                         </li>
-                                        <li>
-                                            <div class="single-box clearfix">
-                                                <img src="assets/images/resource/shop/order-1.jpg" alt="">
-                                                <h6>Mineral Water Bottle x 1</h6>
-                                                <span>$35.00</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="single-box clearfix">
-                                                <img src="assets/images/resource/shop/order-2.jpg" alt="">
-                                                <h6>Mineral Water Bottle x 1</h6>
-                                                <span>$25.00</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="single-box clearfix">
-                                                <img src="assets/images/resource/shop/order-3.jpg" alt="">
-                                                <h6>Mineral Water Bottle x 1</h6>
-                                                <span>$90.00</span>
-                                            </div>
-                                        </li>
-                                        <li class="sub-total clearfix">
+                                        <ul class="cart-table">
+                                            <!-- Product items will be injected by JavaScript -->
+                                        </ul>
+                                        <li class="sub-total subtotal clearfix">
                                             <h6>Sub Total</h6>
-                                            <span>$150.50</span>
+                                            <span>#0.00</span>
                                         </li>
-                                        <li class="order-total clearfix">
+                                        <li class="order-total subtotal clearfix">
                                             <h6>Order Total</h6>
-                                            <span>$150.50</span>
+                                            <span id="vat">#0.00</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+
+                            <!-- Payment Info -->
                             <div class="payment-info">
                                 <h4 class="sub-title">Payment Proccess</h4>
                                 <div class="payment-inner">
+                                    <!-- Direct Bank Transfer -->
                                     <div class="option-block">
                                         <div class="custom-controls-stacked">
                                             <label class="custom-control material-checkbox">
-                                                <input type="checkbox" class="material-control-input">
+                                                <input type="radio" name="payment" value="Direct bank transfer" class="material-control-input">
                                                 <span class="material-control-indicator"></span>
                                                 <span class="description">Direct bank transfer</span>
                                             </label>
                                         </div>
-                                        <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
                                     </div>
+
+                                    <!-- PayStack -->
                                     <div class="option-block">
                                         <div class="custom-controls-stacked">
                                             <label class="custom-control material-checkbox">
-                                                <input type="checkbox" class="material-control-input">
+                                                <input type="radio" name="payment" value="PayStack" class="material-control-input">
                                                 <span class="material-control-indicator"></span>
-                                                <span class="description">Paypal<a href="checkout.html">What is paypal?</a></span>
+                                                <span class="description">PayStack <a href="checkout.html">What is PayStack?</a></span>
                                             </label>
                                         </div>
                                     </div>
+
+                                    <!-- Submit Button -->
                                     <div class="btn-box">
-                                        <a href="checkout.html" class="theme-btn btn-one">Place Your Order</a>
+                                        <button href="#" class="theme-btn btn-one">Place Your Order</button>
                                     </div>
                                 </div>
                             </div>
@@ -409,17 +415,142 @@
         </section>
         <!-- checkout-section end -->
 
+        <!-- checkout-section end -->
+        <script>
+            // Select elements
+            const cartTable = document.querySelector('.cart-table');
+            const paymentInputs = document.querySelectorAll('input[name="payment"]');
+            const paymentMethodField = document.getElementById('paymentMethod');
+            const form = document.querySelector('.billing-form');
+            const subtotalElements = document.querySelectorAll('.subtotal span');
+            const accountSection = document.querySelector('.my-3');
+            const accountEmail = accountSection.querySelector('b');
+
+            // Check LocalStorage for user data
+            const userData = JSON.parse(localStorage.getItem('USER_ACCOUNT'));
+            if (userData && userData.email) {
+                accountSection.style.display = 'block';
+                accountEmail.textContent = userData.email;
+
+                // Populate form when "Uses this account" is clicked
+                accountSection.addEventListener('click', () => {
+                    form.querySelectorAll('input, textarea').forEach(field => {
+                        const name = field.getAttribute('name');
+                        if (userData[name]) {
+                            field.value = userData[name];
+                            field.readOnly = true; // Make fields non-editable
+                        }
+                    });
+                });
+            }
+
+            // Populate cart data
+            const cartData = JSON.parse(localStorage.getItem('USER_CHART')) || [];
+            let subTotal = 0;
+
+            if (cartData.length > 0) {
+                cartData.forEach(item => {
+                    const {
+                        name,
+                        price,
+                        quantity
+                    } = item;
+                    const total = price * quantity;
+                    subTotal += total;
+
+                    const html = `
+            <li>
+                <div class="single-box clearfix">
+                    <h6>${name} x ${quantity}</h6>
+                    <span>#${total.toFixed(2)}</span>
+                </div>
+            </li>`;
+                    cartTable.insertAdjacentHTML('beforeend', html);
+                });
+
+                // Update subtotal and total
+                subtotalElements.forEach(el => {
+                    el.textContent = `#${subTotal.toFixed(2)}`;
+                    if (el.id === 'vat') {
+                        el.textContent = `#${(subTotal + 5).toFixed(2)}`; // Add tax
+                    }
+                });
+            }
+
+            // Handle payment selection
+            paymentInputs.forEach(input => {
+                input.addEventListener('change', () => {
+                    paymentMethodField.value = input.value;
+                });
+            });
+
+            // Handle form submission
+            document.querySelector('.btn-box button').addEventListener('click', async (event) => {
+                event.preventDefault();
+
+                if (!paymentMethodField.value) {
+                    alert('Please select a payment method.');
+                    return;
+                }
+
+                const formData = {};
+                form.querySelectorAll('input, textarea').forEach(field => {
+                    const name = field.getAttribute('name');
+                    if (name) formData[name] = field.value;
+                });
+
+                // Check if the form is filled or user account is available
+                if (!userData && (!formData.email || !formData.first_name)) {
+                    alert('Please fill out the form or use an existing account.');
+                    return;
+                }
+
+                // Save user data to localStorage
+                if (!userData) {
+                    localStorage.setItem('USER_ACCOUNT', JSON.stringify(formData));
+                }
+
+                // Send data to server (simplified)
+                const response = await fetch('../server/client/api/process_order.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        formData,
+                        cartData,
+                        paymentMethod: paymentMethodField.value
+                    }),
+                });
+
+                const result = await response.json();
+
+                console.log(result)
+                if (result.success) {
+                    console.log("Redirect");
+                    
+                    // Redirect based on payment method
+                    // if (paymentMethodField.value === 'Direct bank transfer') {
+                    //     window.location.href = 'bank.php';
+                    // } else if (paymentMethodField.value === 'PayStack') {
+                    //     window.location.href = 'paystack.php';
+                    // }
+                } else {
+                    alert(result.error);
+                }
+            });
+        </script>
 
         <!-- main-footer -->
         <footer class="main-footer">
             <div class="pattern-layer">
-                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-12.png);"></div>
-                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-13.png);"></div>
-                <div class="pattern-3" style="background-image: url(assets/images/shape/shape-14.png);"></div>
+                <div class="pattern-1" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-12.png);"></div>
+                <div class="pattern-2" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-13.png);"></div>
+                <div class="pattern-3" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-14.png);"></div>
             </div>
             <div class="auto-container">
                 <div class="footer-top clearfix">
-                    <div class="line-shape" style="background-image: url(assets/images/shape/shape-11.png);"></div>
+                    <div class="line-shape" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-11.png);"></div>
                     <div class="text pull-left">
                         <h2>Please <span>Call Us</span> to Take an Extraordinary Service</h2>
                     </div>
@@ -431,7 +562,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index-2.html"><img src="assets/images/footer-logo.png" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/footer-logo.png" alt=""></a></figure>
                                 <div class="text">
                                     <p>Nostrud exertation ullamco labor nisi aliquip commodo duis.</p>
                                 </div>
@@ -527,24 +658,25 @@
 
 
     <!-- jequery plugins -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/validation.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/appear.js"></script>
-    <script src="assets/js/scrollbar.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.bootstrap-touchspin.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery.js"></script>
+    <script src="<?php echo $domain ?>assets/js/popper.min.js"></script>
+    <script src="<?php echo $domain ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $domain ?>assets/js/owl.js"></script>
+    <script src="<?php echo $domain ?>assets/js/wow.js"></script>
+    <script src="<?php echo $domain ?>assets/js/validation.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery.fancybox.js"></script>
+    <script src="<?php echo $domain ?>assets/js/appear.js"></script>
+    <script src="<?php echo $domain ?>assets/js/scrollbar.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery-ui.js"></script>
+    <script src="<?php echo $domain ?>assets/js/isotope.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery.nice-select.min.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery.bootstrap-touchspin.js"></script>
 
     <!-- main-js -->
-    <script src="assets/js/script.js"></script>
+    <script src="<?php echo $domain ?>assets/js/script.js"></script>
 
 </body><!-- End of .page_wrapper -->
 
 <!-- Mirrored from azim.commonsupport.com/Acuasafe/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 11:12:11 GMT -->
+
 </html>

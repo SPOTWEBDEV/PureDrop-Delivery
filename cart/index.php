@@ -6,38 +6,40 @@ include('../server/connection.php');
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title><?php echo $sitename ?> - Cart Page</title>
+    <title><?php echo $sitename ?> - Cart Page</title>
 
-<!-- Fav Icon -->
-<link rel="icon" href="<?php echo $domain ?>assets/images/favicon.ico" type="image/x-icon">
+    <!-- Fav Icon -->
+    <link rel="icon" href="<?php echo $domain ?>assets/images/favicon.ico" type="image/x-icon">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
 
-<!-- Stylesheets -->
-<link href="<?php echo $domain ?>assets/css/font-awesome-all.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/flaticon.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/owl.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/bootstrap.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/jquery.fancybox.min.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/animate.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/jquery-ui.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/nice-select.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/jquery.bootstrap-touchspin.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/color.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/style1.css" rel="stylesheet">
-<link href="<?php echo $domain ?>assets/css/responsive.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link href="<?php echo $domain ?>assets/css/font-awesome-all.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/flaticon.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/owl.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/animate.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/nice-select.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/jquery.bootstrap-touchspin.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/color.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/style1.css" rel="stylesheet">
+    <link href="<?php echo $domain ?>assets/css/responsive.css" rel="stylesheet">
 
 </head>
 
 
 <!-- page wrapper -->
+
 <body>
 
     <div class="boxed_wrapper">
@@ -62,8 +64,8 @@ include('../server/connection.php');
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li class="current"><a href="<?php echo $domain ?>">Home</a> </li>
-									<li><a href="<?php echo $domain ?>about/">About</a></li>
-                                    <li><a href="<?php echo $domain  ?>contact/">Contact</a></li>   
+                                    <li><a href="<?php echo $domain ?>about/">About</a></li>
+                                    <li><a href="<?php echo $domain  ?>contact/">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -137,7 +139,7 @@ include('../server/connection.php');
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="fas fa-times"></i></div>
-            
+
             <nav class="menu-box">
                 <div class="nav-logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/logo-2.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
@@ -160,7 +162,7 @@ include('../server/connection.php');
                 </div>
             </nav>
         </div><!-- End Mobile Menu -->
-        
+
 
 
         <!-- Page Title -->
@@ -195,78 +197,14 @@ include('../server/connection.php');
                                         <th class="price">Price</th>
                                         <th class="quantity">Quantity</th>
                                         <th>Subtotal</th>
-                                    </tr>    
+                                    </tr>
                                 </thead>
                                 <tbody class="cart-table">
-<!--
-                                    <tr>
-                                        <td colspan="4" class="prod-column">
-                                            <div class="column-box">
-                                                <div class="remove-btn">
-                                                    <i class="fal fa-times"></i>
-                                                </div>
-                                                <div class="prod-thumb">
-                                                    <img src="<?php echo $domain ?>assets/images/resource/shop/cart-1.jpg" alt="">
-                                                </div>
-                                                <div class="prod-title">
-                                                    Mineral Water Bottle
-                                                </div>    
-                                            </div>
-                                        </td>
-                                        <td class="price">$35.00</td>
-                                        <td class="qty">
-                                            <div class="item-quantity">
-                                                <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                            </div>
-                                        </td>
-                                        <td class="sub-total">$35.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4" class="prod-column">
-                                            <div class="column-box">
-                                                <div class="remove-btn">
-                                                    <i class="fal fa-times"></i>
-                                                </div>
-                                                <div class="prod-thumb">
-                                                    <img src="<?php echo $domain ?>assets/images/resource/shop/cart-2.jpg" alt="">
-                                                </div>
-                                                <div class="prod-title">
-                                                    Mineral Water Bottle
-                                                </div>    
-                                            </div>
-                                        </td>
-                                        <td class="price">$40.00</td>
-                                        <td class="qty">
-                                            <div class="item-quantity">
-                                                <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                            </div>
-                                        </td>
-                                        <td class="sub-total">$40.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4" class="prod-column">
-                                            <div class="column-box">
-                                                <div class="remove-btn">
-                                                    <i class="fal fa-times"></i>
-                                                </div>
-                                                <div class="prod-thumb">
-                                                    <img src="<?php echo $domain ?>assets/images/resource/shop/cart-3.jpg" alt="">
-                                                </div>
-                                                <div class="prod-title">
-                                                    Mineral Water Bottle
-                                                </div>    
-                                            </div>
-                                        </td>
-                                        <td class="price">$45.00</td>
-                                        <td class="qty">
-                                            <div class="item-quantity">
-                                                <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                            </div>
-                                        </td>
-                                        <td class="sub-total">$45.00</td>
-                                    </tr>
--->
-                                </tbody>    
+
+
+
+                                </tbody>
+                                
                             </table>
                         </div>
                     </div>
@@ -287,9 +225,9 @@ include('../server/connection.php');
                                 <h6>Cart Totals</h6>
                                 <ul class="list clearfix">
                                     <li class="subtotal">Subtotal:<span>$150.50</span></li>
-                                    <li class="subtotal" >Order Total:<span id="vat">$150.50</span></li>
+                                    <li class="subtotal">Order Total:<span id="vat">$150.50</span></li>
                                 </ul>
-                                <a href="cart.html" class="theme-btn btn-one">Proceed to Checkout</a>
+                                <a href="../checkout/" class="theme-btn btn-one">Proceed to Checkout</a>
                             </div>
                         </div>
                     </div>
@@ -414,6 +352,92 @@ include('../server/connection.php');
         </button>
     </div>
 
+    <script>
+    let cartTable = document.querySelector('.cart-table');
+    let data = JSON.parse(localStorage.getItem('USER_CHART'));
+    let subtotal = document.querySelectorAll('.subtotal span');
+
+    if (data && data.length > 0) {
+        let subTotal = 0;
+
+        data.forEach(item => {
+            const { id, price, img, name, quantity } = item;
+            const rowSubtotal = Number(price) * Number(quantity);
+            subTotal += rowSubtotal;
+
+            const html = `
+            <tr id="row-${id}">
+                <td colspan="4" class="prod-column">
+                    <div class="column-box">
+                        <div class="remove-btn" data-id="${id}">
+                            <i class="fal fa-times"></i>
+                        </div>
+                        <div class="prod-thumb">
+                            <img src="${img}" alt="">
+                        </div>
+                        <div class="prod-title">
+                            ${name}
+                        </div>
+                    </div>
+                </td>
+                <td class="price">#${price}</td>
+                <td class="qty">
+                    <div class="item-quantity">
+                        <input class="quantity-spinner" data-id="${id}" data-price="${price}" type="number" value="${quantity}" name="quantity" min="1">
+                    </div>
+                </td>
+                <td class="sub-total">#${rowSubtotal}</td>
+            </tr>`;
+            cartTable.insertAdjacentHTML('beforeEnd', html);
+        });
+
+        updateTotals(subTotal);
+
+        // Update subtotal and totals when quantity changes
+        const quantityInputs = document.querySelectorAll('.quantity-spinner');
+        quantityInputs.forEach(input => {
+            input.onchange = event => {
+                const newQuantity = Number(event.target.value);
+                const price = Number(event.target.getAttribute('data-price'));
+                const id = event.target.getAttribute('data-id');
+                const row = document.querySelector(`#row-${id}`);
+
+                // Update row subtotal
+                const rowSubtotal = price * newQuantity;
+                row.querySelector('.sub-total').textContent = `#${rowSubtotal}`;
+
+                // Update total subtotal
+                let newSubTotal = 0;
+                const allSubtotals = document.querySelectorAll('.sub-total');
+                allSubtotals.forEach(el => {
+                    newSubTotal += Number(el.textContent.replace('#', ''));
+                });
+                updateTotals(newSubTotal);
+
+                // Update local storage
+                data = data.map(item => {
+                    if (item.id === id) {
+                        item.quantity = newQuantity;
+                    }
+                    return item;
+                });
+                localStorage.setItem('USER_CHART', JSON.stringify(data));
+            };
+        });
+    }
+
+    // Update totals (subtotal and VAT)
+    function updateTotals(subTotal) {
+        subtotal.forEach(el => {
+            if (el.getAttribute('id') === 'vat') {
+                el.innerHTML = `#${subTotal + 5}.00`; // Assuming VAT is a constant value of 5
+            } else {
+                el.innerHTML = `#${subTotal}.00`;
+            }
+        });
+    }
+</script>
+
 
     <!-- jequery plugins -->
     <script src="<?php echo $domain ?>assets/js/jquery.js"></script>
@@ -432,83 +456,10 @@ include('../server/connection.php');
 
     <!-- main-js -->
     <script src="<?php echo $domain ?>assets/js/script.js"></script>
-	
-	
-	<script>
-		let cartTable = document.querySelector('.cart-table')
-		let data = JSON.parse(localStorage.getItem('USER_CHART'));
-		let subtotal = document.querySelectorAll('.subtotal span')
-		
-		if(data && data.length > 0){
-			let sub_total = 0;
-			for(let i=0;i<data.length;i++){
-				const {price,img,name} = data[i];
-				sub_total += Number(price)
-				const html = `<tr id="tr">
-                                        <td colspan="4" class="prod-column">
-                                            <div class="column-box">
-                                                <div class="remove-btn">
-                                                    <i class="fal fa-times"></i>
-                                                </div>
-                                                <div class="prod-thumb">
-                                                    <img src="<?php echo $domain ?>assets/images/resource/shop/cart-1.jpg" alt="">
-                                                </div>
-                                                <div class="prod-title">
-                                                    ${name}
-                                                </div>    
-                                            </div>
-                                        </td>
-                                        <td class="price">#${price}</td>
-                                        <td class="qty">
-                                            <div class="item-quantity">
-                                                <input  class="quantity-spinner" price="${price}"  type="text" value="1" name="quantity">
-                                            </div>
-                                        </td>
-                                        <td class="sub-total">#${price}</td>
-                                    </tr>`
-				cartTable.insertAdjacentHTML('beforeEnd',html)
-				subtotal.forEach(el=> {					
-					if(el.getAttribute('id') == 'vat'){
-						el.innerHTML =  `#${Number(sub_total) + Number(5)}.00` 
-					}else{
-					    el.innerHTML = '#' + sub_total + '.00'
-					}
-				})
-				let quantity = document.querySelectorAll('.quantity-spinner');
-				quantity.forEach(el=>el.onkeyup = (event)=>{
-					
-					// update the total price for one row 
-					let price = event.target.getAttribute('price');
-					let totalPrice = price * event.target.value;
-					let parent = event.target.closest('#tr');
-					let element = parent.children[3];
-					element.innerHTML = '#' + totalPrice;
-					
-					// update the subtotal and order total
-					
-					let subTotal   = document.querySelectorAll('.sub-total');
-					let theprice = 0;
-					subTotal.forEach(el=>{
-						theprice += Number(el.innerHTML.replaceAll('#',''))		
-						subtotal.forEach(el=> {					
-							if(el.getAttribute('id') == 'vat'){
-								el.innerHTML = `#${Number(theprice) + Number(5)}.00` 
-							}else{
-								el.innerHTML = '#' + theprice + '.00'
-							}
-						})
-						
-					})
-					
-					
-					
-					
-						 
-				})
-			}
-		}
-		
-	</script>
+
+
+
 
 </body><!-- End of .page_wrapper -->
+
 </html>
