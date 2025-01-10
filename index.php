@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<!-- Mirrored from azim.commonsupport.com/Acuasafe/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 11:11:39 GMT -->
+include('./server/connection.php');
+
+?>
+
+<DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Acuasafe - HTML 5 Template Preview</title>
+<title><?php echo $sitename ?> - Welcome Page</title>
 
 <!-- Fav Icon -->
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -83,7 +87,7 @@
                             </div>
                         </li>
                         <li class="cart-box">
-                            <a href="shop.html"><i class="fal fa-shopping-cart"></i><span>3</span></a>
+                            <a href="cart.php"><i class="fal fa-shopping-cart"></i><span>3</span></a>
                         </li>
                         <li class="btn-box">
                             <a href="index-2.html" class="theme-btn btn-one">Request A Quote</a>
@@ -317,16 +321,16 @@
                 <div class="row clearfix">
                     <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
                         <div class="shop-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500m">
-                            <div class="inner-box">
+                            <div class="inner-box" id="cart-1">
                                 <figure class="image-box"><img src="assets/images/resource/shop/shop-1.jpg" alt=""></figure>
                                 <div class="lower-content">
                                     <div class="shape" style="background-image: url(assets/images/shape/shape-7.png);"></div>
                                     <span>2L 3 Bottles</span>
                                     <h4><a href="shop-details.html">Mineral Water Bottle</a></h4>
-                                    <h6>$70.00</h6>
+                                    <h6>$<span>70.00</span></h6>
                                     <p>Lorem ipsum dolor sit amet adipelit sed eiusmte.mpor encid dolore.</p>
                                     <div class="btn-box">
-                                        <a href="shop-details.html" class="theme-btn btn-two">Add to cart</a>
+                                        <button class="theme-btn btn-two addcart">Add to cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -334,16 +338,16 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
                         <div class="shop-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500m">
-                            <div class="inner-box">
+                            <div class="inner-box" id="cart-2">
                                 <figure class="image-box"><img src="assets/images/resource/shop/shop-2.jpg" alt=""></figure>
                                 <div class="lower-content">
                                     <div class="shape" style="background-image: url(assets/images/shape/shape-7.png);"></div>
                                     <span>3L 3 Bottles</span>
                                     <h4><a href="shop-details.html">Mineral Water Bottle</a></h4>
-                                    <h6>$60.00</h6>
+                                    <h6>$<span>60.00</span></h6>
                                     <p>Lorem ipsum dolor sit amet adipelit sed eiusmte.mpor encid dolore.</p>
                                     <div class="btn-box">
-                                        <a href="shop-details.html" class="theme-btn btn-two">Add to cart</a>
+                                         <button class="theme-btn btn-two addcart">Add to cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -351,16 +355,16 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
                         <div class="shop-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500m">
-                            <div class="inner-box">
+                            <div class="inner-box" id="cart-3">
                                 <figure class="image-box"><img src="assets/images/resource/shop/shop-3.jpg" alt=""></figure>
                                 <div class="lower-content">
                                     <div class="shape" style="background-image: url(assets/images/shape/shape-7.png);"></div>
                                     <span>3L 2 Bottles</span>
                                     <h4><a href="shop-details.html">Mineral Water Bottle</a></h4>
-                                    <h6>$55.00</h6>
+                                    <h6>$<span>55.00</span></h6>
                                     <p>Lorem ipsum dolor sit amet adipelit sed eiusmte.mpor encid dolore.</p>
                                     <div class="btn-box">
-                                        <a href="shop-details.html" class="theme-btn btn-two">Add to cart</a>
+                                        <button class="theme-btn btn-two addcart">Add to cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -705,6 +709,57 @@
             <span class="fal fa-angle-up"></span>
         </button>
     </div>
+	
+	
+	<script>
+		
+		let addcart = document.querySelectorAll('.addcart');
+		addcart.forEach(el=> {
+		        el.onclick = (event)=>{
+					 console.log(event.target.closest('.inner-box'))
+					let parent = event.target.closest('.inner-box')
+					let price = document.querySelector(`#${parent.id} h6 span`).textContent
+					let name = document.querySelector(`#${parent.id} h4 a`).textContent
+					let img = document.querySelector(`#${parent.id} figure img`).src
+					console.log(price, name , img)
+					
+					let info = {
+						id:parent.id,
+						price,
+						name,
+						img
+					}
+					
+					let data = JSON.parse(localStorage.getItem('USER_CHART'));
+					
+					if(data == null){
+						let store = [];
+						store.push(info);
+						localStorage.setItem("USER_CHART",JSON.stringify(store))
+					}else{
+
+						let status = true;
+						for(let i=0;i<data.length;i++){
+							if(data[i].id == info.id){
+								status = false
+							}
+						}
+						if(status === true){
+							
+							data.push(info);
+						localStorage.setItem("USER_CHART",JSON.stringify(data))
+							alert('Successful added this item to your cart list')
+						}else{
+							alert('Cart as already been added')
+						}
+						
+					}
+					
+					
+				}
+		})
+	
+	</script>
 
 
     <!-- jequery plugins -->
@@ -725,5 +780,4 @@
 
 </body><!-- End of .page_wrapper -->
 
-<!-- Mirrored from azim.commonsupport.com/Acuasafe/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 11:11:45 GMT -->
 </html>

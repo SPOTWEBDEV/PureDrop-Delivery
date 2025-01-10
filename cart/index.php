@@ -1,34 +1,38 @@
+<?php
+
+include('../server/connection.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from azim.commonsupport.com/Acuasafe/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 11:12:08 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Acuasafe - HTML 5 Template Preview</title>
+<title><?php echo $sitename ?> - Cart Page</title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="<?php echo $domain ?>assets/images/favicon.ico" type="image/x-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
 
 <!-- Stylesheets -->
-<link href="assets/css/font-awesome-all.css" rel="stylesheet">
-<link href="assets/css/flaticon.css" rel="stylesheet">
-<link href="assets/css/owl.css" rel="stylesheet">
-<link href="assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
-<link href="assets/css/animate.css" rel="stylesheet">
-<link href="assets/css/jquery-ui.css" rel="stylesheet">
-<link href="assets/css/nice-select.css" rel="stylesheet">
-<link href="assets/css/jquery.bootstrap-touchspin.css" rel="stylesheet">
-<link href="assets/css/color.css" rel="stylesheet">
-<link href="assets/css/style1.css" rel="stylesheet">
-<link href="assets/css/responsive.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/font-awesome-all.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/flaticon.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/owl.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/bootstrap.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/jquery.fancybox.min.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/animate.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/jquery-ui.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/nice-select.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/jquery.bootstrap-touchspin.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/color.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/style1.css" rel="stylesheet">
+<link href="<?php echo $domain ?>assets/css/responsive.css" rel="stylesheet">
 
 </head>
 
@@ -38,15 +42,14 @@
 
     <div class="boxed_wrapper">
 
-
         <!-- main header -->
         <header class="main-header">
             <!-- header-lower -->
             <div class="header-lower">
-                <div class="shape" style="background-image: url(assets/images/shape/shape-1.png);"></div>
+                <div class="shape" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-1.png);"></div>
                 <div class="outer-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="index-2.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                        <figure class="logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/logo.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area clearfix">
                         <!--Mobile Navigation Toggler-->
@@ -58,91 +61,9 @@
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="index-2.html">Home</a>
-                                        <ul>
-                                            <li><a href="index-2.html">Home Page 01</a></li>
-                                            <li><a href="index-3.html">Home Page 02</a></li>
-                                            <li><a href="index-4.html">Home Page 03</a></li>
-                                            <li><a href="index-onepage.html">OnePage Home</a></li>
-                                            <li><a href="index-rtl.html">RTL Home</a></li>
-                                            <li class="dropdown"><a href="index-2.html">Header Style</a>
-                                                <ul>
-                                                    <li><a href="index-2.html">Header Style 01</a></li>
-                                                    <li><a href="index-4.html">Header Style 02</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="index-2.html">Pages</a>
-                                        <ul>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="team.html">Our Team</a></li>
-                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                            <li><a href="faq.html">Faq's</a></li>
-                                            <li><a href="gallery.html">Gallery One</a></li>
-                                            <li><a href="gallery-2.html">Gallery Two</a></li>
-                                            <li><a href="error.html">404</a></li>
-                                        </ul>
-                                    </li> 
-                                    <li class="dropdown"><a href="index-2.html">Services</a>
-                                        <ul>
-                                            <li><a href="service.html">Our Services</a></li>
-                                            <li><a href="service-details.html">Project Planning</a></li>
-                                            <li><a href="service-details-2.html">Residential Waters</a></li>
-                                            <li><a href="service-details-3.html">Commercial Waters</a></li>
-                                            <li><a href="service-details-4.html">Filtration Plants</a></li>
-                                            <li><a href="service-details-5.html">Water Softening</a></li>
-                                            <li><a href="service-details-6.html">Market Research</a></li>
-                                        </ul>
-                                    </li> 
-                                    <li class="current dropdown"><a href="index-2.html">Shop</a>
-                                        <ul>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="shop-details.html">Shop Details</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                        </ul>
-                                    </li> 
-                                    <li class="dropdown"><a href="index-2.html">Elements</a>
-                                        <div class="megamenu">
-                                            <div class="row clearfix">
-                                                <div class="col-xl-6 column">
-                                                    <ul>
-                                                        <li><h4>Elements 1</h4></li>
-                                                        <li><a href="feature-element-1.html">Feature Block 01</a></li>
-                                                        <li><a href="feature-element-2.html">Feature Block 02</a></li>
-                                                        <li><a href="about-element-1.html">About Block 01</a></li>
-                                                        <li><a href="about-element-2.html">About Block 02</a></li>
-                                                        <li><a href="service-element-1.html">Service Block 01</a></li>
-                                                        <li><a href="service-element-2.html">Service Block 02</a></li>
-                                                        <li><a href="service-element-3.html">Service Block 03</a></li>
-                                                        <li><a href="service-element-4.html">Service Block 04</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-xl-6 column">
-                                                    <ul>
-                                                        <li><h4>Elements 2</h4></li>
-                                                        <li><a href="news-element-1.html">News Block 01</a></li>
-                                                        <li><a href="news-element-2.html">News Block 02</a></li>
-                                                        <li><a href="team-element-1.html">Team Block 01</a></li>
-                                                        <li><a href="team-element-2.html">Team Block 02</a></li>
-                                                        <li><a href="cta-element-1.html">Cta Block 01</a></li>
-                                                        <li><a href="cta-element-2.html">Cta Block 02</a></li>
-                                                        <li><a href="pricing-element.html">Pricing Block</a></li>
-                                                        <li><a href="chooseus-element.html">Chooseus Block</a></li>
-                                                    </ul>
-                                                </div>                                   
-                                            </div>                                        
-                                        </div>
-                                    </li> 
-                                    <li class="dropdown"><a href="index-2.html">Blog</a>
-                                        <ul>
-                                            <li><a href="blog.html">Blog Grid</a></li>
-                                            <li><a href="blog-2.html">Blog Standard</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>  
-                                    <li><a href="contact.html">Contact</a></li>   
+                                    <li class="current"><a href="<?php echo $domain ?>">Home</a> </li>
+									<li><a href="<?php echo $domain ?>about/">About</a></li>
+                                    <li><a href="<?php echo $domain  ?>contact/">Contact</a></li>   
                                 </ul>
                             </div>
                         </nav>
@@ -164,7 +85,7 @@
                             </div>
                         </li>
                         <li class="cart-box">
-                            <a href="shop.html"><i class="fal fa-shopping-cart"></i><span>3</span></a>
+                            <a href="cart.php"><i class="fal fa-shopping-cart"></i><span>3</span></a>
                         </li>
                         <li class="btn-box">
                             <a href="index-2.html" class="theme-btn btn-one">Request A Quote</a>
@@ -177,7 +98,7 @@
             <div class="sticky-header">
                 <div class="outer-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="index-2.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                        <figure class="logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/logo.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area clearfix">
                         <nav class="main-menu clearfix">
@@ -218,7 +139,7 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index-2.html"><img src="assets/images/logo-2.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/logo-2.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
@@ -239,11 +160,12 @@
                 </div>
             </nav>
         </div><!-- End Mobile Menu -->
+        
 
 
         <!-- Page Title -->
-        <section class="page-title centred" style="background-image: url(assets/images/background/page-title.jpg);">
-            <div class="shape" style="background-image: url(assets/images/shape/banner-shap.png);"></div>
+        <section class="page-title centred" style="background-image: url(<?php echo $domain ?>assets/images/background/page-title.jpg);">
+            <div class="shape" style="background-image: url(<?php echo $domain ?>assets/images/shape/banner-shap.png);"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <h1>Cart Page</h1>
@@ -275,7 +197,8 @@
                                         <th>Subtotal</th>
                                     </tr>    
                                 </thead>
-                                <tbody>
+                                <tbody class="cart-table">
+<!--
                                     <tr>
                                         <td colspan="4" class="prod-column">
                                             <div class="column-box">
@@ -283,7 +206,7 @@
                                                     <i class="fal fa-times"></i>
                                                 </div>
                                                 <div class="prod-thumb">
-                                                    <img src="assets/images/resource/shop/cart-1.jpg" alt="">
+                                                    <img src="<?php echo $domain ?>assets/images/resource/shop/cart-1.jpg" alt="">
                                                 </div>
                                                 <div class="prod-title">
                                                     Mineral Water Bottle
@@ -305,7 +228,7 @@
                                                     <i class="fal fa-times"></i>
                                                 </div>
                                                 <div class="prod-thumb">
-                                                    <img src="assets/images/resource/shop/cart-2.jpg" alt="">
+                                                    <img src="<?php echo $domain ?>assets/images/resource/shop/cart-2.jpg" alt="">
                                                 </div>
                                                 <div class="prod-title">
                                                     Mineral Water Bottle
@@ -327,7 +250,7 @@
                                                     <i class="fal fa-times"></i>
                                                 </div>
                                                 <div class="prod-thumb">
-                                                    <img src="assets/images/resource/shop/cart-3.jpg" alt="">
+                                                    <img src="<?php echo $domain ?>assets/images/resource/shop/cart-3.jpg" alt="">
                                                 </div>
                                                 <div class="prod-title">
                                                     Mineral Water Bottle
@@ -342,6 +265,7 @@
                                         </td>
                                         <td class="sub-total">$45.00</td>
                                     </tr>
+-->
                                 </tbody>    
                             </table>
                         </div>
@@ -362,8 +286,8 @@
                             <div class="total-cart-box clearfix">
                                 <h6>Cart Totals</h6>
                                 <ul class="list clearfix">
-                                    <li>Subtotal:<span>$150.50</span></li>
-                                    <li>Order Total:<span>$150.50</span></li>
+                                    <li class="subtotal">Subtotal:<span>$150.50</span></li>
+                                    <li class="subtotal" >Order Total:<span id="vat">$150.50</span></li>
                                 </ul>
                                 <a href="cart.html" class="theme-btn btn-one">Proceed to Checkout</a>
                             </div>
@@ -378,13 +302,13 @@
         <!-- main-footer -->
         <footer class="main-footer">
             <div class="pattern-layer">
-                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-12.png);"></div>
-                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-13.png);"></div>
-                <div class="pattern-3" style="background-image: url(assets/images/shape/shape-14.png);"></div>
+                <div class="pattern-1" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-12.png);"></div>
+                <div class="pattern-2" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-13.png);"></div>
+                <div class="pattern-3" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-14.png);"></div>
             </div>
             <div class="auto-container">
                 <div class="footer-top clearfix">
-                    <div class="line-shape" style="background-image: url(assets/images/shape/shape-11.png);"></div>
+                    <div class="line-shape" style="background-image: url(<?php echo $domain ?>assets/images/shape/shape-11.png);"></div>
                     <div class="text pull-left">
                         <h2>Please <span>Call Us</span> to Take an Extraordinary Service</h2>
                     </div>
@@ -396,7 +320,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index-2.html"><img src="assets/images/footer-logo.png" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index-2.html"><img src="<?php echo $domain ?>assets/images/footer-logo.png" alt=""></a></figure>
                                 <div class="text">
                                     <p>Nostrud exertation ullamco labor nisi aliquip commodo duis.</p>
                                 </div>
@@ -492,24 +416,99 @@
 
 
     <!-- jequery plugins -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/validation.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/appear.js"></script>
-    <script src="assets/js/scrollbar.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.bootstrap-touchspin.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery.js"></script>
+    <script src="<?php echo $domain ?>assets/js/popper.min.js"></script>
+    <script src="<?php echo $domain ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $domain ?>assets/js/owl.js"></script>
+    <script src="<?php echo $domain ?>assets/js/wow.js"></script>
+    <script src="<?php echo $domain ?>assets/js/validation.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery.fancybox.js"></script>
+    <script src="<?php echo $domain ?>assets/js/appear.js"></script>
+    <script src="<?php echo $domain ?>assets/js/scrollbar.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery-ui.js"></script>
+    <script src="<?php echo $domain ?>assets/js/isotope.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery.nice-select.min.js"></script>
+    <script src="<?php echo $domain ?>assets/js/jquery.bootstrap-touchspin.js"></script>
 
     <!-- main-js -->
-    <script src="assets/js/script.js"></script>
+    <script src="<?php echo $domain ?>assets/js/script.js"></script>
+	
+	
+	<script>
+		let cartTable = document.querySelector('.cart-table')
+		let data = JSON.parse(localStorage.getItem('USER_CHART'));
+		let subtotal = document.querySelectorAll('.subtotal span')
+		
+		if(data && data.length > 0){
+			let sub_total = 0;
+			for(let i=0;i<data.length;i++){
+				const {price,img,name} = data[i];
+				sub_total += Number(price)
+				const html = `<tr id="tr">
+                                        <td colspan="4" class="prod-column">
+                                            <div class="column-box">
+                                                <div class="remove-btn">
+                                                    <i class="fal fa-times"></i>
+                                                </div>
+                                                <div class="prod-thumb">
+                                                    <img src="<?php echo $domain ?>assets/images/resource/shop/cart-1.jpg" alt="">
+                                                </div>
+                                                <div class="prod-title">
+                                                    ${name}
+                                                </div>    
+                                            </div>
+                                        </td>
+                                        <td class="price">#${price}</td>
+                                        <td class="qty">
+                                            <div class="item-quantity">
+                                                <input  class="quantity-spinner" price="${price}"  type="text" value="1" name="quantity">
+                                            </div>
+                                        </td>
+                                        <td class="sub-total">#${price}</td>
+                                    </tr>`
+				cartTable.insertAdjacentHTML('beforeEnd',html)
+				subtotal.forEach(el=> {					
+					if(el.getAttribute('id') == 'vat'){
+						el.innerHTML =  `#${Number(sub_total) + Number(5)}.00` 
+					}else{
+					    el.innerHTML = '#' + sub_total + '.00'
+					}
+				})
+				let quantity = document.querySelectorAll('.quantity-spinner');
+				quantity.forEach(el=>el.onkeyup = (event)=>{
+					
+					// update the total price for one row 
+					let price = event.target.getAttribute('price');
+					let totalPrice = price * event.target.value;
+					let parent = event.target.closest('#tr');
+					let element = parent.children[3];
+					element.innerHTML = '#' + totalPrice;
+					
+					// update the subtotal and order total
+					
+					let subTotal   = document.querySelectorAll('.sub-total');
+					let theprice = 0;
+					subTotal.forEach(el=>{
+						theprice += Number(el.innerHTML.replaceAll('#',''))		
+						subtotal.forEach(el=> {					
+							if(el.getAttribute('id') == 'vat'){
+								el.innerHTML = `#${Number(theprice) + Number(5)}.00` 
+							}else{
+								el.innerHTML = '#' + theprice + '.00'
+							}
+						})
+						
+					})
+					
+					
+					
+					
+						 
+				})
+			}
+		}
+		
+	</script>
 
 </body><!-- End of .page_wrapper -->
-
-<!-- Mirrored from azim.commonsupport.com/Acuasafe/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 11:12:10 GMT -->
 </html>
