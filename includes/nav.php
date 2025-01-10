@@ -40,7 +40,7 @@
                             </div>
                         </li>
                         <li class="cart-box">
-                            <a href="cart.php"><i class="fal fa-shopping-cart"></i><span>3</span></a>
+                            <a href="<?php echo $domain ?>cart/"><i class="fal fa-shopping-cart"></i><span>3</span></a>
                         </li>
                         <li class="btn-box">
                             <a href="index-2.html" class="theme-btn btn-one">Request A Quote</a>
