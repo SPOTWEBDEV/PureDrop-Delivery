@@ -119,7 +119,7 @@ include('../../server/connection.php');
                                                                                                    </tr>
                                                                                           </thead>
                                                                                           <tbody>
-                                                                                              <?php $select_user = mysqli_query($connection,"SELECT * FROM `user`");
+                                                                                              <?php $select_user = mysqli_query($connection,"SELECT * FROM `users`");
                                                                                                  if(mysqli_num_rows($select_user)){
                                                                                                      $count=0;
                                                                                                      while($row = mysqli_fetch_assoc($select_user)){ $count++ ?>
@@ -153,7 +153,7 @@ include('../../server/connection.php');
                                                                                                               </tr>
                                                                                               
                                                                                                          
-                                                                                                    <?php }}else{ ?> <p>Table is Empty</p> <?php } ?>
+                                                                                                    <?php }}else{ ?> <p style="color:red">Table is Empty</p> <?php } ?>
                                                                                           </tbody>
                                                                                  </table>
                                                                         </div>

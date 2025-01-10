@@ -5,12 +5,10 @@ include('../../server/connection.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from wowdash.wowtheme7.com/tailwind/demo/view-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 18:38:13 GMT -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wowdash - Tailwind CSS Admin Dashboard HTML Template</title>
+  <title><?php echo $sitename ?> -  User Page</title>
   <link rel="icon" type="image/png" href="<?php echo $domain ?>assets/images/favicon.png" sizes="16x16">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
