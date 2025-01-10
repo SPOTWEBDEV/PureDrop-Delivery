@@ -24,45 +24,56 @@ if ($formData) {
 
         $insertUserQuery = "INSERT INTO users (name, email, phone, address, date) 
                             VALUES ('$firstName', '$email', '$phone', '$address', '$date')";
-
-            
-        
         if (mysqli_query($connection, $insertUserQuery)) {
             $userId = mysqli_insert_id($connection);
             
-            // Create invoice
-           $invoice_id = rand(111111111111,999999999999);
-            $insertInvoiceQuery = "INSERT INTO invoice (user_id,invoice_id, payment_method) 
-                                   VALUES ('$userId','$invoice_id', '$paymentMethod')";
             
-            if (mysqli_query($connection, $insertInvoiceQuery)) {
-                
-                
-                // Insert cart items into invoice_items table
-                foreach ($cartData as $item) {
-                    $productName = $item['name'];
-                    $quantity = $item['quantity'];
-                    $price = $item['price'];
-                    $total = $quantity * $price;
-                    
-                    $insertInvoiceItemQuery = "INSERT INTO invoice_items (invoice_id, product_name, quantity, price, total) 
-                                               VALUES ('$invoice_id', '$productName', '$quantity', '$price', '$total')";
-                    mysqli_query($connection, $insertInvoiceItemQuery);
-                }
-
-                // Send success response
-                echo json_encode(['success' => true, 'message' => 'Order processed successfully']);
-            } else {
-                echo json_encode(['error' => 'Failed to create invoice']);
-            }
         } else {
             echo json_encode(['error' => 'Failed to insert user']);
         }
-    } else {
-        // User exists, return user data (optional)
-        $user = mysqli_fetch_assoc($query);
-        echo json_encode(['email' => $email, 'userId' => $user['id']]);
+
+
+    }else{
+        $row  = mysqli_fetch_assoc($query);
+        $userId = $row['id'];
     }
+
+
+    
+
+
+        // Create invoice
+        $invoice_id = rand(111111111111,999999999999);
+        $insertInvoiceQuery = "INSERT INTO invoice (user_id,invoice_id, payment_method) 
+                               VALUES ('$userId','$invoice_id', '$paymentMethod')";
+        
+        if (mysqli_query($connection, $insertInvoiceQuery)) {
+            
+            
+            // Insert cart items into invoice_items table
+            foreach ($cartData as $item) {
+                $productName = $item['name'];
+                $quantity = $item['quantity'];
+                $price = $item['price'];
+                $total = $quantity * $price;
+                
+                $insertInvoiceItemQuery = "INSERT INTO invoice_items(invoice_id, product_name, quantity, price, total) 
+                                           VALUES ('$invoice_id', '$productName', '$quantity', '$price', '$total')";
+                mysqli_query($connection, $insertInvoiceItemQuery);
+
+                // echo json_encode(['success' => true, 'message' => mysqli_error($connection)]);
+            }
+
+            // Send success response
+            echo json_encode(['success' => true, 'message' => 'Order processed successfully']);
+        } else {
+            echo json_encode(['error' => 'Failed to create invoice']);
+        }
+
+
+
+
+
 } else {
     echo json_encode(['error' => 'Form data is missing']);
 }
